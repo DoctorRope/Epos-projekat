@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Srbija ne diše</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar section-content">    
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">Srbija ne diše</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html" class="nav-link">O nama</a>
+                </li>
+                <li class="nav-item">
+                    <a href="methodology.html" class="nav-link">Metodologija</a>
+                </li>
+                <li class="nav-item">
+                    <a href="prognosis.html" class="nav-link">Prognoza</a>
+                </li>                
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a href="donate.html" class="nav-link">Doniraj</a>
+                </li>
+            </ul>
+
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>
+
+    <main>      
+
+        <section class="za-koga-section">
+            <div class="section-content">
+                <div class="za-koga-image-wrapper">
+                    <img src="images/Logo.png" alt="logoimg" class="za-koga-image">
+                </div>
+                <div class="za-koga-details">
+                    <h2 class="section-title">Metodologija istraživanja</h2>
+                    <p class="text"> Koristi se kombinacija javno dostupnih podataka, statističke analize i metoda mašinskog učenja kako bi se analiziralo stanje kvaliteta vazduha i procenili potencijalni zdravstveni rizici za stanovništvo.
+                                    Naš pristup se zasniva na transparentnom prikupljanju, obradi i interpretaciji podataka, uz korišćenje savremenih analitičkih tehnika.</p>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="za-koga-image-wrapper">
+                    <img src="images/rawdata.png" alt="rawdata" class="za-koga-image">
+                </div>
+                <div class="za-koga-details">
+                    <h2 class="section-title">Prikupljanje podataka</h2>
+                    <p class="text"> Primarno se koriste javno dostupni podaci sa zvaničnih stanica za merenje kvaliteta vazduha poput iqair.com.
+                                    Podaci koji se analiziraju uključuju koncentracije ključnih zagađujućih materija, kao što su: PM2.5, PM10, azotni oksidi (NO₂), ugljen-monoksid (CO) i ozon (O3)
+                    </p>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="za-koga-image-wrapper">
+                    <img src="images/fulldata.png" alt="fulldata" class="za-koga-image">
+                </div>
+                <div class="za-koga-details">
+                    <h2 class="section-title">Obrada i priprema podataka (Data engineering)</h2>
+                    <p class="text"> Pre analize, prikupljeni podaci prolaze kroz proces čišćenja i standardizacije u Python okruženju. Ovaj proces obuhvata: uklanjanje ili označavanje nedostajućih vrednosti, 
+                        uklanjanje očiglednih grešaka u merenju, normalizaciju podataka radi bolje analize  </p>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="za-koga-image-wrapper">
+                    <img src="images/lstm.png" alt="lstm" class="za-koga-image">
+                </div>
+                <div class="za-koga-details">
+                    <h2 class="section-title">Model mašinskog učenja</h2>
+                    <p class="text"> Za analizu vremenskih obrazaca i predviđanje promena u kvalitetu vazduha koristi se LSTM (Long Short-Term Memory) model,
+                         koji predstavlja specijalizovanu vrstu rekurentne neuronske mreže pogodnu za rad sa vremenskim serijama.
+                        LSTM modeli su posebno efikasni u identifikaciji dugoročnih zavisnosti u podacima, 
+                        što ih čini pogodnim za analizu promena u koncentracijama zagađujućih materija tokom vremena.</p>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="za-koga-image-wrapper">
+                    <img src="images/graph.png" alt="graph" class="za-koga-image">
+                </div>
+                <div class="za-koga-details">
+                    <h2 class="section-title">Analiza i interpretacija rezultata</h2>
+                    <p class="text"> Rezultati modela se dodatno analiziraju kako bi se dobili razumljivi i korisni uvidi za korisnike platforme. 
+                        Podaci se predstavljaju kroz grafikone, trendove i sažetke koji omogućavaju lakše razumevanje promena u kvalitetu vazduha.
+                        Poseban fokus stavlja se na povezivanje nivoa zagađenja sa potencijalnim zdravstvenim posledicama, 
+                        uz korišćenje referentnih vrednosti koje preporučuju relevantne međunarodne organizacije.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <div class="section-content">
+            <p class="footer-text">Srbija ne diše 2026</p>
+            <p class="footer-text">060/1234-567</p>
+
+            <div class="social-link-list">
+                <a href="https://www.facebook.com/" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://x.com/home" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

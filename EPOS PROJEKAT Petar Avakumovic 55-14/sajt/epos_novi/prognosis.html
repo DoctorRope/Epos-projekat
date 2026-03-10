@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Srbija ne diše</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar section-content">    
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">Srbija ne diše</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html" class="nav-link">O nama</a>
+                </li>
+                <li class="nav-item">
+                    <a href="methodology.html" class="nav-link">Metodologija</a>
+                </li>
+                <li class="nav-item">
+                    <a href="prognosis.html" class="nav-link">Prognoza</a>
+                </li>                
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a href="donate.html" class="nav-link">Doniraj</a>
+                </li>
+            </ul>
+
+            <button id="menu-open-button" class="fas fa-bars"></button>
+        </nav>
+    </header>   
+    
+    <section class="prognosis-section">
+        <h2 class="section-title">Odaberite mesto</h2>
+        <div class="section-content">            
+            <select id="navigator" onchange="osveziPrikaz()">
+                <option value="beograd">Beograd</option>
+                <option value="nis">Niš</option>
+                <option value="novisad">Novi Sad</option>
+            </select>
+
+     <!-- Elementi koji se kriju/prikazuju  -->
+        <div id="beograd" class="sekcija">
+            <h3 class="graph-title">Prosečna vrednost indeksa zagađenosti (AQI) za posmatrani mesec je 87</h3>
+            <img src="images/beograd-graph.png" alt="beograd" class="prognosis-image">
+            <img src="images/beograd-numbers.png" alt="beogradnum" class="prognosis-image">
+            <table class="aqi-table">
+                <thead>
+                    <tr>
+                        <th>AQI Opseg</th>
+                        <th>Kategorija</th>
+                        <th>Opis</th>
+                        <th>Preporuke</th>
+                    </tr>
+                </thead>
+            
+                <tbody>
+            
+                    <tr class="aqi-good">
+                        <td>0 - 50</td>
+                        <td>Dobar</td>
+                        <td>Kvalitet vazduha se smatra zadovoljavajućim, a zagađenje vazduha predstavlja mali rizik ili nikakav
+                            rizik.</td>
+                        <td>Nijedan</td>
+                    </tr>
+            
+                    <tr class="aqi-moderate">
+                        <td>51 - 100</td>
+                        <td>Umereno zagađen</td>
+                        <td>Kvalitet vazduha je prihvatljiv; međutim, za neke zagađivače može postojati umerena zabrinutost za
+                            zdravlje veoma malog broja ljudi koji su neobično osetljivi na zagađenje vazduha.</td>
+                        <td>Aktivna deca i odrasli, kao i ljudi sa respiratornim oboljenjima, kao što je astma, trebalo bi da
+                            ograniče produženi napor na otvorenom.</td>
+                    </tr>
+            
+                    <tr class="aqi-sensitive">
+                        <td>101 - 150</td>
+                        <td>Nezdrav za osetljive grupe</td>
+                        <td>Pripadnici osetljivih grupa mogu imati zdravstvene posledice. Najverovatnije neće uticati na širu
+                            javnost.</td>
+                        <td>Aktivna deca i odrasli, kao i ljudi sa respiratornim oboljenjima, kao što je astma, trebalo bi da
+                            ograniče produženi napor na otvorenom.</td>
+                    </tr>
+            
+                    <tr class="aqi-unhealthy">
+                        <td>151 - 200</td>
+                        <td>Nezdrav</td>
+                        <td>Svako može početi da doživljava zdravstvene efekte; pripadnici osetljivih grupa mogu imati ozbiljnije
+                            zdravstvene posledice.</td>
+                        <td>Aktivna deca i odrasli, kao i osobe sa respiratornim oboljenjima treba da izbegavaju produženi napor na
+                            otvorenom; svi ostali treba da ograniče produženi napor.</td>
+                    </tr>
+            
+                    <tr class="aqi-very-unhealthy">
+                        <td>201 - 300</td>
+                        <td>Veoma nezdrav</td>
+                        <td>Zdravstvena upozorenja o vanrednim situacijama. Veća je verovatnoća da će cela populacija biti pogođena.
+                        </td>
+                        <td>Aktivna deca i odrasli, kao i ljudi sa respiratornim oboljenjima treba da izbegavaju sve napore na
+                            otvorenom.</td>
+                    </tr>
+            
+                    <tr class="aqi-hazardous">
+                        <td>300+</td>
+                        <td>Katastrofalan</td>
+                        <td>Zdravstveno upozorenje: svako može imati ozbiljnije zdravstvene posledice.</td>
+                        <td>Svako treba da izbegava sve napore na otvorenom.</td>
+                    </tr>
+            
+                </tbody>
+            </table>
+        </div>
+
+        <div id="nis" class="sekcija" style="display:none;">
+            <h3 class="graph-title">Prosečna vrednost indeksa zagađenosti (AQI) za posmatrani mesec je 123</h3>
+            <img src="images/nis-graph.png" alt="nis" class="prognosis-image">
+            <img src="images/nis-numbers.png" alt="nisnum" class="prognosis-image">
+            <table class="aqi-table">
+                <thead>
+                    <tr>
+                        <th>AQI Opseg</th>
+                        <th>Kategorija</th>
+                        <th>Opis</th>
+                        <th>Preporuke</th>
+                    </tr>
+                </thead>
+            
+                <tbody>
+            
+                    <tr class="aqi-good">
+                        <td>0 - 50</td>
+                        <td>Dobar</td>
+                        <td>Kvalitet vazduha se smatra zadovoljavajućim, a zagađenje vazduha predstavlja mali rizik ili nikakav
+                            rizik.</td>
+                        <td>Nijedan</td>
+                    </tr>
+            
+                    <tr class="aqi-moderate">
+                        <td>51 - 100</td>
+                        <td>Umereno zagađen</td>
+                        <td>Kvalitet vazduha je prihvatljiv; međutim, za neke zagađivače može postojati umerena zabrinutost za
+                            zdravlje veoma malog broja ljudi koji su neobično osetljivi na zagađenje vazduha.</td>
+                        <td>Aktivna deca i odrasli, kao i ljudi sa respiratornim oboljenjima, kao što je astma, trebalo bi da
+                            ograniče produženi napor na otvorenom.</td>
+                    </tr>
+            
+                    <tr class="aqi-sensitive">
+                        <td>101 - 150</td>
+                        <td>Nezdrav za osetljive grupe</td>
+                        <td>Pripadnici osetljivih grupa mogu imati zdravstvene posledice. Najverovatnije neće uticati na širu
+                            javnost.</td>
+                        <td>Aktivna deca i odrasli, kao i ljudi sa respiratornim oboljenjima, kao što je astma, trebalo bi da
+                            ograniče produženi napor na otvorenom.</td>
+                    </tr>
+            
+                    <tr class="aqi-unhealthy">
+                        <td>151 - 200</td>
+                        <td>Nezdrav</td>
+                        <td>Svako može početi da doživljava zdravstvene efekte; pripadnici osetljivih grupa mogu imati ozbiljnije
+                            zdravstvene posledice.</td>
+                        <td>Aktivna deca i odrasli, kao i osobe sa respiratornim oboljenjima treba da izbegavaju produženi napor na
+                            otvorenom; svi ostali treba da ograniče produženi napor.</td>
+                    </tr>
+            
+                    <tr class="aqi-very-unhealthy">
+                        <td>201 - 300</td>
+                        <td>Veoma nezdrav</td>
+                        <td>Zdravstvena upozorenja o vanrednim situacijama. Veća je verovatnoća da će cela populacija biti pogođena.
+                        </td>
+                        <td>Aktivna deca i odrasli, kao i ljudi sa respiratornim oboljenjima treba da izbegavaju sve napore na
+                            otvorenom.</td>
+                    </tr>
+            
+                    <tr class="aqi-hazardous">
+                        <td>300+</td>
+                        <td>Katastrofalan</td>
+                        <td>Zdravstveno upozorenje: svako može imati ozbiljnije zdravstvene posledice.</td>
+                        <td>Svako treba da izbegava sve napore na otvorenom.</td>
+                    </tr>
+            
+                </tbody>
+            </table>
+        </div>
+
+        <div id="novisad" class="sekcija" style="display:none;">
+            <h3 class="graph-title">Prosečna vrednost indeksa zagađenosti (AQI) za posmatrani mesec je 81</h3>
+            <img src="images/novisad-graph.png" alt="novisad" class="prognosis-image">
+            <img src="images/novisad-numbers.png" alt="novisadnum" class="prognosis-image">
+            <table class="aqi-table">
+                <thead>
+                    <tr>
+                        <th>AQI Opseg</th>
+                        <th>Kategorija</th>
+                        <th>Opis</th>
+                        <th>Preporuke</th>
+                    </tr>
+                </thead>
+            
+                <tbody>
+            
+                    <tr class="aqi-good">
+                        <td>0 - 50</td>
+                        <td>Dobar</td>
+                        <td>Kvalitet vazduha se smatra zadovoljavajućim, a zagađenje vazduha predstavlja mali rizik ili nikakav
+                            rizik.</td>
+                        <td>Nijedan</td>
+                    </tr>
+            
+                    <tr class="aqi-moderate">
+                        <td>51 - 100</td>
+                        <td>Umereno zagađen</td>
+                        <td>Kvalitet vazduha je prihvatljiv; međutim, za neke zagađivače može postojati umerena zabrinutost za
+                            zdravlje veoma malog broja ljudi koji su neobično osetljivi na zagađenje vazduha.</td>
+                        <td>Aktivna deca i odrasli, kao i ljudi sa respiratornim oboljenjima, kao što je astma, trebalo bi da
+                            ograniče produženi napor na otvorenom.</td>
+                    </tr>
+            
+                    <tr class="aqi-sensitive">
+                        <td>101 - 150</td>
+                        <td>Nezdrav za osetljive grupe</td>
+                        <td>Pripadnici osetljivih grupa mogu imati zdravstvene posledice. Najverovatnije neće uticati na širu
+                            javnost.</td>
+                        <td>Aktivna deca i odrasli, kao i ljudi sa respiratornim oboljenjima, kao što je astma, trebalo bi da
+                            ograniče produženi napor na otvorenom.</td>
+                    </tr>
+            
+                    <tr class="aqi-unhealthy">
+                        <td>151 - 200</td>
+                        <td>Nezdrav</td>
+                        <td>Svako može početi da doživljava zdravstvene efekte; pripadnici osetljivih grupa mogu imati ozbiljnije
+                            zdravstvene posledice.</td>
+                        <td>Aktivna deca i odrasli, kao i osobe sa respiratornim oboljenjima treba da izbegavaju produženi napor na
+                            otvorenom; svi ostali treba da ograniče produženi napor.</td>
+                    </tr>
+            
+                    <tr class="aqi-very-unhealthy">
+                        <td>201 - 300</td>
+                        <td>Veoma nezdrav</td>
+                        <td>Zdravstvena upozorenja o vanrednim situacijama. Veća je verovatnoća da će cela populacija biti pogođena.
+                        </td>
+                        <td>Aktivna deca i odrasli, kao i ljudi sa respiratornim oboljenjima treba da izbegavaju sve napore na
+                            otvorenom.</td>
+                    </tr>
+            
+                    <tr class="aqi-hazardous">
+                        <td>300+</td>
+                        <td>Katastrofalan</td>
+                        <td>Zdravstveno upozorenje: svako može imati ozbiljnije zdravstvene posledice.</td>
+                        <td>Svako treba da izbegava sve napore na otvorenom.</td>
+                    </tr>
+            
+                </tbody>
+            </table>
+        </div>
+    
+    <script src="script2.js"></script>         
+        </div>
+
+    </section>
+
+    <footer class="footer-section">
+        <div class="section-content">
+            <p class="footer-text">Srbija ne diše 2026</p>
+            <p class="footer-text">060/1234-567</p>
+
+            <div class="social-link-list">
+                <a href="https://www.facebook.com/" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://x.com/home" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
